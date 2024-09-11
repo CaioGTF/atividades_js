@@ -16,5 +16,4 @@ btAdicionar.onclick = () => {
     inputSoma.value = soma;
     inputQtd.value = qtd;
     inputMedia.value = soma / qtd;
-    
 }
