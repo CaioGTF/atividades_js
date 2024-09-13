@@ -1,0 +1,11 @@
+.divLetra {
+    font-size: 400%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    float:left;
+    display: flex;
+    gap: 50px;
+}
