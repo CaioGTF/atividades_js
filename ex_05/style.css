@@ -5,6 +5,33 @@ body {
 }
 
 #exibicao-palavra{
-    
+    font-size: 220%;
     margin-bottom: 80px;
+}
+
+
+#letras_chutadas {
+    font-size: 150%;
+    color: purple;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+#mensagem {
+    display: none;
+}
+#recomecar {
+    display: none;
+    background-color: aquamarine;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;    
+
+}
+
+#recomecar:hover {
+    background-color: cadetblue;
+    transition: 0.5s;
 }
