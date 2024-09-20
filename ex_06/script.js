@@ -8,7 +8,12 @@ const handlebtFetchClick = () => {
         return;
     }
     fetch(`https://swapi.dev/api/people/${id}`).then((response)) => {
-        console.log
+        console.log(response);
+        if (responde.ok) {
+            console.log("Sucesso!");
+        } else {
+            console.log("Error")
+        }
         }
 };
 
