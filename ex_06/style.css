@@ -50,3 +50,17 @@ a{
     font-size: 0.9rem;
 
 }
+
+.content-main .project div .title {
+    color: #47a6f0;
+}
+
+.content-main .project .language .circle{
+    background-color: #47a6f0;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border: 1px solid #30363d;
+    border-radius: 50%;
+}
