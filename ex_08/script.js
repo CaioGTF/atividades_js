@@ -1,12 +1,12 @@
-const inputUsername = document.getElementById("inputUsername");
-const inputPassword = document.getElementById("inputPassword");
-const btSignup = document.getElementById("btSignup");
+const inputDespesa = document.getElementById("inputDespesa");
+const inputValor = document.getElementById("inputValor");
+const btAdicionar = document.getElementById("btAdicionar");
 
-const handlebtSignupClick = () => {
-    const username = inputUsername.value.trim();
-    if (!username) {
-        alert("Preencha o nome do usuário");
-        inputUsername.focus();
+const handlebtAdicionarClick = () => {
+    const despesa = inputDespesa.value.trim();
+    if (!despesa) {
+        alert("Preencha uma despesa");
+        inputDespesa.focus();
         return;
     } 
 }
