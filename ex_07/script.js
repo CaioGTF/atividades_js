@@ -14,12 +14,11 @@ const headersJson = {
   "Content-Type": "application/json",
 };
 
-
 const createList = (data) => {
   olDespesas.innerHTML = "";
   const tarefas = data.results;
   tarefas.forEach((tarefa) => {
-    const text = document.createTextNode(`${tarefa.despesa} `);
+    const text = document.createTextNode(`${tarefa.descricao} `); // Substitua "tarefa.despesa" por "tarefa.descricao"
     const li = document.createElement("li");
     li.appendChild(text);
     const cb = document.createElement("input");
@@ -34,6 +33,7 @@ const createList = (data) => {
     olDespesas.appendChild(li);
   });
 };
+
 
 const handleCheckboxClick = async (cb, tarefa) => {
   try {
@@ -111,15 +111,16 @@ const handleBtAdicionarClick = async () => {
     const response = await fetch(baseURL, {
       method: "POST",
       headers: headersJson,
-      body: JSON.stringify({ despesa: despesa }),
+      body: JSON.stringify({ descricao: despesa, valor: parseFloat(valor) }), // Ajuste: campo "descricao"
     });
     console.log(response);
     if (!response.ok) {
       alert("Erro ao acessar o servidor: " + response.status);
       throw new Error("Erro encontrado: " + response.status);
     }
-    inputDescricao.value = "";
-    inputDescricao.focus();
+    inputDespesa.value = "";
+    inputValor.value = "";
+    inputDespesa.focus();
     getTarefas();
   } catch (error) {
     console.log(error);
