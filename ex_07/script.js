@@ -2,7 +2,9 @@ const inputDespesa = document.getElementById("inputDespesa");
 const inputValor = document.getElementById("inputValor");
 const btAdicionar = document.getElementById("btAdicionar");
 const olDespesas = document.getElementById("olDespesas");
+const inputSoma = document.getElementById("inputSoma");
 
+let soma = 0;
 const baseURL = "https://parseapi.back4app.com/classes/crud";
 const headers = {
   "X-Parse-Application-Id": "HvJgOgDQd7O9l1E1XpaVWbf0rYV9skVkmXjvSGO6",
@@ -14,26 +16,36 @@ const headersJson = {
   "Content-Type": "application/json",
 };
 
+// Atualizar soma e exibir total
+const atualizarSoma = () => {
+  inputSoma.value = soma.toFixed(2);
+};
+
 const createList = (data) => {
   olDespesas.innerHTML = "";
+  soma = 0; // Resetar a soma para recalcular
   const tarefas = data.results;
   tarefas.forEach((tarefa) => {
-    const text = document.createTextNode(`${tarefa.descricao} `); // Substitua "tarefa.despesa" por "tarefa.descricao"
+    const text = document.createTextNode(`${tarefa.descricao} - R$${tarefa.valor.toFixed(2)} `);
     const li = document.createElement("li");
     li.appendChild(text);
+    
     const cb = document.createElement("input");
     cb.type = "checkbox";
     cb.checked = tarefa.concluida;
     cb.onchange = () => handleCheckboxClick(cb, tarefa);
     li.appendChild(cb);
+    
     const bt = document.createElement("button");
     bt.innerHTML = "x";
     bt.onclick = () => handleBtRemoverClick(bt, tarefa);
     li.appendChild(bt);
-    olDespesas.appendChild(li);
-  });
-};
 
+    olDespesas.appendChild(li);
+    soma += tarefa.valor; // Somar o valor da despesa
+  });
+  atualizarSoma(); // Atualizar o campo de soma com o valor total
+};
 
 const handleCheckboxClick = async (cb, tarefa) => {
   try {
@@ -44,11 +56,9 @@ const handleCheckboxClick = async (cb, tarefa) => {
       body: JSON.stringify({ concluida: !tarefa.concluida }),
     });
     cb.disabled = false;
-    console.log(response);
     if (!response.ok) {
       cb.checked = !cb.checked;
       alert("Erro ao acessar o servidor: " + response.status);
-      throw new Error("Erro encontrado: " + response.status);
     }
   } catch (error) {
     cb.checked = !cb.checked;
@@ -64,10 +74,8 @@ const handleBtRemoverClick = async (bt, tarefa) => {
       headers: headers,
     });
     bt.disabled = false;
-    console.log(response);
     if (!response.ok) {
       alert("Erro ao acessar o servidor: " + response.status);
-      throw new Error("Erro encontrado: " + response.status);
     }
     getTarefas();
   } catch (error) {
@@ -81,10 +89,8 @@ const getTarefas = async () => {
       method: "GET",
       headers: headers,
     });
-    console.log(response);
     if (!response.ok) {
       alert("Erro ao acessar o servidor: " + response.status);
-      throw new Error("Erro encontrado: " + response.status);
     }
     const data = await response.json();
     createList(data);
@@ -101,23 +107,24 @@ const handleBtAdicionarClick = async () => {
     return;
   }
 
-  const valor = inputValor.value.trim();
-  if (!valor) {
+  const valor = parseFloat(inputValor.value.trim());
+  if (isNaN(valor)) {
     alert("Preencha o valor da despesa!");
     inputValor.focus();
     return;
   }
+
   try {
     const response = await fetch(baseURL, {
       method: "POST",
       headers: headersJson,
-      body: JSON.stringify({ descricao: despesa, valor: parseFloat(valor) }), // Ajuste: campo "descricao"
+      body: JSON.stringify({ descricao: despesa, valor: valor }), // Ajuste: campo "descricao"
     });
-    console.log(response);
     if (!response.ok) {
       alert("Erro ao acessar o servidor: " + response.status);
-      throw new Error("Erro encontrado: " + response.status);
     }
+    soma += valor; // Atualiza a soma com a nova despesa
+    atualizarSoma(); // Exibe o total atualizado
     inputDespesa.value = "";
     inputValor.value = "";
     inputDespesa.focus();
