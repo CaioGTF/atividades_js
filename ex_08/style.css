@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 20px;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ 
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+ 
+.title h1 {
+    text-align: center;
+    color: #fff;
+}
+ 
+form {
+    background-color: #eeecec;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(240, 237, 237, 0.5);
+    width: 400px;
+}
+ 
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+}
+ 
+.botoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 0px;
+}
+ 
+.botoes button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #6a1b9a, #8e24aa);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+ 
+button:hover {
+    background: linear-gradient(45deg, #8e24aa, #6a1b9a);
+}
+ 
+#dados-exibidos {
+    background-color: #eeecec;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 40px rgba(240, 237, 237, 0.5);
+    width: 400px;
+    color: #333;
+}
+ 
+h3, p {
+    color: #333;
+}
+ 
+#dados-nome, #dados-endereco,
+#dados-email, #dados-telefone{
+    display: flex;
+    gap: 8px;
+}
+ 
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+ 
+    form, #dados-exibidos {
+        padding: 15px;
+        width: 330px; /* Faz com que o formulário ocupe toda a largura disponível */
+        margin: 10px; /* Ajusta a margem */
+    }
+ 
+    .botoes {
+        flex-direction: column; /* Alinha os botões verticalmente */
+    }
+ 
+    .botoes button {
+        width: 100%;
+        margin-bottom: 10px; /* Espaçamento entre os botões */
+    }
+ 
+    .title h1 {
+        font-size: 1.5em; /* Ajusta o tamanho da fonte para títulos */
+    }
+    
+    label {
+        font-size: 1em; /* Ajusta o tamanho da fonte das labels */
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 1em; /* Ajusta o tamanho da fonte dos inputs */
+    }
+}
