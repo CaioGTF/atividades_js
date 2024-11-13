@@ -1,0 +1,182 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(223, 223, 223);
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.titulo {
+    text-decoration: none;
+}
+header h3.subtitle {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+}
+
+/* Menu lateral */
+.sections {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    background-color: #444;
+    padding: 2rem;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside li {
+    margin: 1rem 0;
+}
+
+aside a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+aside a:hover {
+    color: rgb(105, 105, 248);
+    transition: 0.4s;
+    transform: scale(2.0);
+}
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.sobreMim, .projects, .publications, .contact {
+    margin-bottom: 2rem;
+}
+
+/* Seções */
+section h1, section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333;
+}
+
+section p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Ícones sociais */
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    margin-right: 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+}
+
+/* Projetos */
+.projects h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.JogoSenha, .delfinder {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.JogoSenha button, .delfinder button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.JogoSenha button:hover, .delfinder button:hover {
+    background-color: #444;
+}
+
+/* Formulário de contato */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 2rem;
+}
