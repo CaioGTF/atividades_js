@@ -110,6 +110,15 @@ section p {
     margin-top: 1rem;
 }
 
+.git {
+    width: 20px;
+    margin-top: 30px;
+}
+
+.link {
+    width: 20px;
+    margin-top: 30px;
+}
 .social-icons a {
     margin-right: 1rem;
     color: #333;
@@ -147,9 +156,13 @@ section p {
 }
 
 .JogoSenha button:hover, .delfinder button:hover {
-    background-color: #444;
+    background-color: rgb(105, 105, 248);
+    transition: 0.5s;
 }
 
+.mtsearch img {
+    width: 300px;
+}
 /* Formulário de contato */
 form {
     background-color: #fff;
@@ -179,13 +192,17 @@ form button {
 }
 
 form button:hover {
-    background-color: #444;
+    background-color: rgb(105, 105, 248);
+    transition: 0.5s;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #333;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXwp4OvkQqTLyj7Fi0HwEBLjJlCeP3aT9na_POoefZiA&s');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #fff;
     padding: 1rem;
     margin-top: 2rem;

@@ -39,8 +39,8 @@
                     e pelas possibilidades que poderiam ser realizadas juntando a tecnologia e a biologia. Por essa razão, comecei meus estudos aprofundados na área, desenvolvendo habilidades principalmente em Python, R e o pacote Biopython.
                 </p>
                 <div class="social-icons">
-                    <a href="https://github.com/" target="_blank">GitHub</a> <img class    src="img/github.png" alt="">
-                    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+                    <img class="git" src="img/github.png" alt=""> <a href="https://github.com/" target="_blank">GitHub</a>
+                    <img class="link" src="img/linkedin.png" alt=""> <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
                 </div>
             </section>
 
@@ -63,16 +63,27 @@
                         <button id="MostrarCombinacao">Mostrar Combinação Secreta</button>
                         <div class="input">
                             <input type="text" id="inputTentativa" maxlength="4" placeholder="Digite sua tentativa (4 dígitos)">
-                            <button id="btEnviarTentativa">Enviar Tentativa</button>
                         </div>
+                        <button id="btEnviarTentativa">Enviar Tentativa</button>
                         <ul id="listaTentativas"></ul>
                     </div>
                 </div>
 
                 <div class="delfinder">
                     <h3>Delfinder</h3>
-                    <p>Uma ferramenta voltada para revolucionar a análise de dados de alinhamentos múltiplos...</p>
+                    <p>Uma ferramenta voltada para revolucionar a análise de dados de alinhamentos múltiplos. A Delfinder servirá para pegar mais de 20 mil dados de sequências de DNA disponíveis no NCBI. Ademais, ela irá fazer um filtro onde não serão repetidas
+                    sequências com ID, nome e sequência iguais. Depois disso, serão contabilizadas quantas espécies existem a nível de família dentro daquela análise. Após isso, será feito o alinhamento múltiplo das sequências e a partir disso a Delfinder irá identificar as variações de pelagem dos animais
+                    a partir das deleções de pares de base. Disponível em breve em todos os sites do Brasil e mundo.
+                    </p>
                     <img src="img/delfinder.jpeg" alt="Imagem da ferramenta Delfinder">
+                </div>
+                <div class="mtsearch" >
+                    <h3>MTsearch</h3>
+                    <p>Mais uma ferramenta criada pelo cientista Caio Gabriel, a MTsearch é um programa criado totalmente em python, juntamente com o pacote Biopython que pega arquivos de anotação de genomas completos
+                        e extrai todos os 13 principais genes mitocondriais desse genoma.
+                    </p>
+                    <img src="img/mtsearch.jpeg" alt="">
+                    <p>Apresentação da MTsearch no Simpósio Norte e Nordeste de Bioinformática 2024.</p>
                 </div>
             </section>
 
@@ -102,7 +113,7 @@
                     </div>
                     <div class="phone">
                         <label for="phone">Telefone:</label>
-                        <input type="tel" id="phone">
+                        <input type="number" id="phone">
                     </div>
                     <button type="submit" class="button">Enviar dados</button> 
                 </form> 
