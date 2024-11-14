@@ -155,6 +155,10 @@ section p {
     border-radius: 5px;
 }
 
+.premio {
+    width: 500px;
+    height: 500px;
+}
 .JogoSenha button:hover, .delfinder button:hover {
     background-color: rgb(105, 105, 248);
     transition: 0.5s;
