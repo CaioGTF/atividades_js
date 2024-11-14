@@ -25,11 +25,15 @@ header {
 header h1 a {
     font-size: 2rem;
     text-decoration: none;
+    color: #fff;
 }
 
-.titulo {
-    text-decoration: none;
+header h1 a:hover {
+    transition: 0.4s;
+    color:rgb(105, 105, 248);
+    transform: scale(1.1);
 }
+
 header h3.subtitle {
     font-weight: normal;
     font-size: 1.2rem;
