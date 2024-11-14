@@ -17,37 +17,53 @@ header {
     background-color: #333;
     color: #fff;
     padding: 2rem;
+}
+
+.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header h1 a {
+/* Título e subtítulo */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo a {
     font-size: 2rem;
     text-decoration: none;
     color: #fff;
 }
 
-header h1 a:hover {
+.titulo a:hover {
     transition: 0.4s;
-    color:rgb(105, 105, 248);
+    color: rgb(105, 105, 248);
     transform: scale(1.1);
 }
 
-header h1 a:active {
+.titulo a:active {
     transform: scale(0.9);
 }
 
-
-header h3.subtitle {
+.subtitle {
     font-weight: normal;
     font-size: 1.2rem;
 }
 
-header img {
-    width: 200px;
-    height: 200px;
+/* Imagens */
+.perfil {
+    width: 150px; /* Tamanho da imagem de perfil */
+    height: 150px;
     border-radius: 70%;
+    margin: 0 2rem; /* Espaçamento ao redor da imagem de perfil */
+}
+
+.dna {
+    width: 300px; /* Tamanho da imagem de DNA */
+    opacity: 10%;
 }
 
 /* Menu lateral */
