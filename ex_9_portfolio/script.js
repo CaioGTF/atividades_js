@@ -11,21 +11,18 @@ const listaSenhas = [
     '4444'
   ];  
 
-let palavraEscolhida;
-let exibicaoPalavra;
-let letrasChutadas;
+let senhaEscolhida;
+let senhasChutadas;
 let tentativasRestantes;
 let numeroErros;
 
 function iniciarJogo() {
-    palavraEscolhida = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
-    console.log(palavraEscolhida);
-    exibicaoPalavra = Array(palavraEscolhida.length).fill('_');
-    console.log(exibicaoPalavra);
+    senhaEscolhida = listaSenhas[Math.floor(Math.random() * listaSenhas.length)];
+    console.log(senhaEscolhida);
 
-    letrasChutadas = [];
+    senhasChutadas = [];
 
-    tentativasRestantes = 7;
+    tentativasRestantes = 3;
 
     numeroErros = 0;
 
@@ -33,37 +30,33 @@ function iniciarJogo() {
 }
 
 function atualizarExibicao() {
-    document.getElementById("exibicao-palavra").innerText = exibicaoPalavra.join(' ');
-    document.getElementById("letras_chutadas").innerText = `${letrasChutadas.join(', ')}`;
-
-    document.getElementById("imagem").src = `imagens_forca/forca${numeroErros}.png`;
+    document.getElementById("senhas_chutadas").innerText = `${senhasChutadas.join(',      ')}`;
 
     if(tentativasRestantes ===0) {
-        encerrarJogo('Você morreu!!');
-    } else if(!exibicaoPalavra.includes('_')) {
-        encerrarJogo('Parabéns, você venceu!!');
+        encerrarJogo('Você não pode mais fazer tentativas');
+    } else if(senhasChutadas == senhaEscolhida) {
+        encerrarJogo('Parabéns, você acertou!');
     }
 }
 
-function chutarLetra() {
-    const entradaLetra = document.getElementById('entrada_letra');
-    const letra = entradaLetra.value.toLowerCase();
-    if(!letra.match(/[a-zà-ùç]/i)) {
-        alert('Por favor, insira uma letra válida!');
+function chutarSenha() {
+    const entradaSenha = document.getElementById('entrada_senha');
+    const senha = entradaSenha.value.toLowerCase();
+    if(!letra.match(/[1-9]/i)) {
+        alert('Por favor, insira um número!');
         return;
     }
 
-    if(letrasChutadas.includes(letra)) {
-        alert('Você já tentou esta letra. Tente outra.');
+    if(senhasChutadas.includes(senha)) {
+        alert('Você já tentou esta senha. Tente outra.');
         return;
     }
 
-    letrasChutadas.push(letra);
+    senhasChutadas.push(senha);
 
-    if(palavraEscolhida.includes(letra)){
-        for (let i=0; i< palavraEscolhida.length; i++){
-            if(palavraEscolhida[i] === letra){
-                exibicaoPalavra[i] = letra;
+    if(senhaEscolhida.includes(senha)){
+        for (let i=0; i< senhaEscolhida.length; i++){
+            if(senhaEscolhida[i] === letra){
             }
         }
     }else {
@@ -71,14 +64,14 @@ function chutarLetra() {
         numeroErros++;
     }
 
-    entradaLetra.value = '';
+    entradaSenha.value = '';
 
     atualizarExibicao();
 }
 
 
 function encerrarJogo(mensagem) {
-    document.getElementById('entrada_letra').disabled = true;
+    document.getElementById('entrada_senha').disabled = true;
     document.getElementById('mensagem').innerText = mensagem;
 
     document.getElementById('recomecar').style.display = 'block';
