@@ -61,19 +61,18 @@
                     <p>O jogo da senha é um jogo de quebra de código mental ou de papel e lápis para dois ou mais jogadores. O jogo é jogado em turnos por dois oponentes que visam decifrar o código secreto do outro por tentativa e erro.</p>
                     <div class="JogoSenha">
                         <h1>Jogo Senha (Bulls and Cows)</h1>
-                        <button id="MostrarCombinacao">Mostrar Combinação Secreta</button>
+                        <button id="MostrarCombinacao" onclick="mostrarCombinacao()">Mostrar Combinação Secreta</button>
                         <div class="input">
-                            <input type="number" id="entrada_senha" maxlength="4" placeholder="Digite sua tentativa (4 dígitos)">
-                        </div>
-                        <button id="btnChutar" onclick="chutarSenha">Enviar Tentativa</button>
+                        <input type="text" id="entrada_senha" maxlength="4" placeholder="Digite sua tentativa (4 dígitos)">
+                    </div>
+                        <button id="btnChutar" onclick="chutarSenha()">Enviar Tentativa</button>
                         <ul id="listaTentativas"></ul>
                         <h4>Senhas chutadas</h4>
                         <div id="senhas_chutadas"></div>
-                        <div id="mensagem">Você ganhou!!</div><br>
-                        <button id="recomecar">recomeçar</button>
-                        <h1>Jogo da Forca</h1>
+                        <div id="mensagem" style="display: none;">Você ganhou!!</div><br>
+                        <button id="recomecar" onclick="iniciarJogo()" style="display: none;">Recomeçar</button>
                     </div>
-                </div>
+
 
                 <div class="delfinder">
                     <h3>Delfinder</h3>
