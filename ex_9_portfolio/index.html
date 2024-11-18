@@ -63,10 +63,15 @@
                         <h1>Jogo Senha (Bulls and Cows)</h1>
                         <button id="MostrarCombinacao">Mostrar Combinação Secreta</button>
                         <div class="input">
-                            <input type="text" id="inputTentativa" maxlength="4" placeholder="Digite sua tentativa (4 dígitos)">
+                            <input type="number" id="entrada_senha" maxlength="4" placeholder="Digite sua tentativa (4 dígitos)">
                         </div>
-                        <button id="btEnviarTentativa">Enviar Tentativa</button>
+                        <button id="btnChutar" onclick="chutarSenha">Enviar Tentativa</button>
                         <ul id="listaTentativas"></ul>
+                        <h4>Senhas chutadas</h4>
+                        <div id="senhas_chutadas"></div>
+                        <div id="mensagem">Você ganhou!!</div><br>
+                        <button id="recomecar">recomeçar</button>
+                        <h1>Jogo da Forca</h1>
                     </div>
                 </div>
 
