@@ -111,17 +111,25 @@
                 <form action="">
                     <div class="name">
                         <label for="name">Nome:</label>
-                        <input type="text" id="name" />
+                        <input type="text" id="nome" />
                     </div>
                     <div class="mail">
                         <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" />
+                        <input type="email" id="email" />
+                    </div>
+                    <div class="adress">
+                        <label for="text">Endereço: </label>
+                        <input type="text" id="endereco">
                     </div>
                     <div class="phone">
                         <label for="phone">Telefone:</label>
-                        <input type="number" id="phone">
+                        <input type="text" id="telefone">
                     </div>
-                    <button type="submit" class="button">Enviar dados</button> 
+                    <div class="botoes">
+                        <button type="button" onclick="gravar()">Gravar</button>
+                        <button type="button" onclick="exibir()">Exibir</button>
+                        <button type="button" onclick="enviar()">Enviar</button>
+                      </div>
                 </form> 
             </section>           
         </main>
