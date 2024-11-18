@@ -67,10 +67,6 @@ title:hover {
     margin: 0 2rem; /* Espaçamento ao redor da imagem de perfil */
 }
 
-.dna {
-    width: 300px; /* Tamanho da imagem de DNA */
-    opacity: 10%;
-}
 
 /* Menu lateral */
 .sections {
@@ -180,7 +176,7 @@ section p {
 
 .premio {
     width: 500px;
-    height: 500px;
+    height: 800px;
 }
 .JogoSenha button:hover, .delfinder button:hover {
     background-color: rgb(105, 105, 248);
