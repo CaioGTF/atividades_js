@@ -102,14 +102,12 @@ function gravar (){
 
 function exibir(){
     let nome = localStorage.getItem('nome');
-    // buscando do localStorage o valor do campo nome e adicionando na variável 'nome'
     let endereco = localStorage.getItem('endereco');
     let email = localStorage.getItem('email');
     let telefone = localStorage.getItem('telefone');
 
     if (nome && endereco && email && telefone) {
         document.getElementById('dados-nome').querySelector('p').textContent = nome;
-        // adicionando o valor da variável nome no campo 'p' da div com id 'dados-nome'
         document.getElementById('dados-endereco').querySelector('p').textContent = endereco;
         document.getElementById('dados-email').querySelector('p').textContent = email;
         document.getElementById('dados-telefone').querySelector('p').textContent = telefone;
@@ -120,7 +118,6 @@ function exibir(){
 
 function enviar(){
     let nome = localStorage.getItem('nome');
-    // buscando do localStorage o valor do campo nome e adicionando na variável 'nome'
     let endereco = localStorage.getItem('endereco');
     let email = localStorage.getItem('email');
     let telefone = localStorage.getItem('telefone');
