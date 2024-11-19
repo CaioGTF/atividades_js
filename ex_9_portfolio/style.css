@@ -1,4 +1,4 @@
-/* Configurações gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body {
     color: #333;
 }
 
-/* Cabeçalho */
+
 header {
     background-color: #333;
     color: #fff;
@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
 }
 
-/* Título e subtítulo */
+
 .title {
     display: flex;
     flex-direction: column;
@@ -33,8 +33,8 @@ header {
 }
 
 title:hover {
-    transform: scale(1.2); /* Aumenta 20% */
-    transition: transform 0.3s ease; /* Animação suave */
+    transform: scale(1.2); 
+    transition: 0.3s;
 }
 
 .titulo a {
@@ -59,16 +59,16 @@ title:hover {
     font-size: 1.2rem;
 }
 
-/* Imagens */
+
 .perfil {
-    width: 150px; /* Tamanho da imagem de perfil */
+    width: 150px; 
     height: 150px;
     border-radius: 70%;
-    margin: 0 2rem; /* Espaçamento ao redor da imagem de perfil */
+    margin: 0 2rem; 
 }
 
 
-/* Menu lateral */
+
 .sections {
     display: flex;
 }
@@ -100,7 +100,7 @@ aside a:hover {
 }
 
 
-/* Conteúdo principal */
+
 main {
     flex: 1;
     padding: 2rem;
@@ -110,7 +110,7 @@ main {
     margin-bottom: 2rem;
 }
 
-/* Seções */
+
 section h1, section h2 {
     color: #333;
     font-size: 1.8rem;
@@ -124,7 +124,7 @@ section p {
     margin-bottom: 1.5rem;
 }
 
-/* Ícones sociais */
+
 .social-icons {
     margin-top: 1rem;
 }
@@ -150,7 +150,7 @@ section p {
     transition: 0.5s;
 }
 
-/* Projetos */
+
 .projects h3 {
     color: #333;
     font-size: 1.5rem;
@@ -186,7 +186,7 @@ section p {
 .mtsearch img {
     width: 300px;
 }
-/* Formulário de contato */
+
 form {
     background-color: #fff;
     padding: 2rem;
